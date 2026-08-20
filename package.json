@@ -1,7 +1,12 @@
 {
   "name": "shapecontext",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ShapeContext - An AI-powered local notes app with MCP",
+  "files": [
+    "bin",
+    "dist-server",
+    "client/dist"
+  ],
   "bin": {
     "shapecontext": "bin/cli.js",
     "shapecontext-mcp": "dist-server/mcp/stdio.js"
