@@ -1,6 +1,6 @@
 {
   "name": "shapecontext",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "ShapeContext - An AI-powered local notes app with MCP",
   "files": [
     "bin",
