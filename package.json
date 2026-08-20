@@ -1,0 +1,33 @@
+{
+  "name": "shapecontext",
+  "version": "1.0.0",
+  "description": "ShapeContext - An AI-powered local notes app with MCP",
+  "bin": {
+    "shapecontext": "bin/cli.js"
+  },
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts",
+    "build:client": "cd client && npm.cmd run build",
+    "build:server": "tsup src/index.ts --format cjs --out-dir dist-server",
+    "build": "npm run build:client && npm run build:server",
+    "start": "node bin/cli.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "better-sqlite3": "^13.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "open": "^11.0.1",
+    "openai": "^7.5.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.5.4",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  }
+}
