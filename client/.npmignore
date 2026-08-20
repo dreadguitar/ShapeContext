@@ -1,6 +1,5 @@
 node_modules/
 src/
 public/
-index.html
 tsconfig.*
 *.config.js
