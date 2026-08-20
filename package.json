@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts",
-    "build:client": "cd client && npm.cmd run build",
+    "build:client": "cd client && npm run build",
     "build:server": "tsup src/index.ts --format cjs --out-dir dist-server",
     "build": "npm run build:client && npm run build:server",
     "start": "node bin/cli.js"
