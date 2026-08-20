@@ -1,14 +1,15 @@
 {
   "name": "shapecontext",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ShapeContext - An AI-powered local notes app with MCP",
   "bin": {
-    "shapecontext": "bin/cli.js"
+    "shapecontext": "bin/cli.js",
+    "shapecontext-mcp": "dist-server/mcp/stdio.js"
   },
   "scripts": {
     "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts",
     "build:client": "cd client && npm run build",
-    "build:server": "tsup src/index.ts --format cjs --out-dir dist-server",
+    "build:server": "tsup src/index.ts src/mcp/stdio.ts --format cjs --out-dir dist-server",
     "build": "npm run build:client && npm run build:server",
     "start": "node bin/cli.js"
   },
