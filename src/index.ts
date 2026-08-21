@@ -8,13 +8,14 @@ import { setupMCPServer } from './mcp/server';
 
 const app = express();
 app.use(cors());
+// Setup MCP Server routes before the SPA fallback and express.json()
+// This is critical because the MCP SDK consumes req.body as a raw stream in POST /mcp/messages
+setupMCPServer(app);
+
 app.use(express.json());
 
 // API Routes
 app.use('/api', routes);
-
-// Setup MCP Server routes before the SPA fallback
-setupMCPServer(app);
 
 // Serve static frontend
 const clientPath = path.join(__dirname, '../client/dist');
